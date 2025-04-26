@@ -1,0 +1,36 @@
+[project]
+name = "costpi-bckend"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "zPaulo",email = "paulotjs147@hotmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "django-ninja (>=1.4.1,<2.0.0)",
+    "django-extensions (>=4.1,<5.0)",
+    "python-decouple (>=3.8,<4.0)",
+    "psycopg2-binary (>=2.9.10,<3.0.0)",
+]
+
+[tool.poetry]
+packages = [{include = "apps", from = "src"}]
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.11.7"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312" 
+exclude = ["migrations", ".venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]  # E=pycodestyle, F=pyflakes, I=isort
+ignore = ["E501"]         # E501 = ignorar linhas muito longas (opcional)
+fixable = ["ALL"]         # permitir corrigir automaticamente
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
