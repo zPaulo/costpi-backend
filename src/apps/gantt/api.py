@@ -7,18 +7,9 @@ from .services import generate_schedule
 
 router = Router(tags=["gantt"])
 
-@router.get(
-    'healthcheck',
-    response=StatusSchema,
-    tags=['gantt'],
-    summary='Health Check',
-    description='Health Check for Gantt API',
-)
-def health_check(request):
-    return HTTPStatus.OK, {"status": "OK"}
 
 @router.post(
-    "/schedule", 
+    "/agendamento-sementes", 
     response=list[taskOut],
     tags=["gantt"],
     summary="Get Gantt Schedule",
