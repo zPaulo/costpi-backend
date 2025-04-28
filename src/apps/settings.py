@@ -14,9 +14,7 @@ SECRET_KEY = config('SECRET_KEY', default='django-insecure-secret-key')
 SECURE_SSL_REDIRECT = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-CORS_ALLOWED_ORIGINS = [
-    "*",
-]
+CORS_ALLOW_ALL_ORIGINS = True
 
 
 DEBUG = config('DEBUG', default=False, cast=bool)
