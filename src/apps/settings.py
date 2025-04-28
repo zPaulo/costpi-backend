@@ -11,10 +11,20 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY', default='django-insecure-secret-key')
 
+SECURE_SSL_REDIRECT = True
+
 
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'api.costpi.com',
+    'costpi.com',
+    'www.costpi.com',
+    'costpi-backend-production.up.railway.app',
+    '127.0.0.1',
+    'localhost',
+]
+
 
 
 # Application definition
