@@ -26,6 +26,8 @@ ALLOWED_HOSTS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
     'api.costpi.com',
+    'agro.costpi.com',
+    'www.agro.costpi.com',
     'costpi.com',
     'www.costpi.com',
     'costpi-backend-production.up.railway.app',
